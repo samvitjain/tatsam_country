@@ -11,6 +11,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Defined all major themes here for global scope.
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
