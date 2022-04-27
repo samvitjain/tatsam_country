@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:tatsam_country/modules/country/country_page.dart';
 
 void main() {
@@ -13,7 +14,19 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        // primarySwatch: Colors.blue,
+        appBarTheme: AppBarTheme(
+          color: Color.fromARGB(255, 247, 250, 247),
+          elevation: 0,
+          titleTextStyle: GoogleFonts.playfairDisplay().copyWith(
+            color: Colors.black,
+            fontSize: 24,
+          ),
+          foregroundColor: Colors.black,
+        ),
+        textTheme: GoogleFonts.quicksandTextTheme(
+          Theme.of(context).textTheme,
+        ),
       ),
       home: const CountryPage(),
     );

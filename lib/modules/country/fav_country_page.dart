@@ -11,6 +11,9 @@ class FavouriteCountyView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text('Favourite'),
+      ),
       body: ListView.builder(
           itemCount: favCountryList.length,
           itemBuilder: (ctx, index) {
@@ -23,24 +26,7 @@ class FavouriteCountyView extends StatelessWidget {
               ),
               title: Text(favCountryList[index].country),
               subtitle: Text(favCountryList[index].region),
-              // trailing: IconButton(
-              //   icon: const Icon(
-              //     Icons.favorite,
-              //   ),
-              //   color: favCountries.contains(favCountryList[index].code)
-              //       ? Colors.red
-              //       : Colors.grey,
-              //   onPressed: () {
-              //     setState(() {
-              //       if (favCountries
-              //           .contains(favCountryList[index].code)) {
-              //         favCountries.remove(favCountryList[index].code);
-              //       } else {
-              //         favCountries.add(favCountryList[index].code);
-              //       }
-              //     });
-              //   },
-              // ),
+              trailing: Text('${index + 1}'),
             );
           }),
     );
