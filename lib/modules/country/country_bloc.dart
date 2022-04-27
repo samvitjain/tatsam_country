@@ -24,11 +24,12 @@ class CountryBloc {
       );
       log(data.toString());
       return countryData;
-    } catch (e) {
-      log(e.toString());
-      if (e is SocketException) {
+    } on DioError catch (e) {
+      if (e.message.contains('SocketException')) {
         return Future.error('Please check your network connectivity');
       }
+    } catch (e) {
+      log(e.toString());
       return Future.error(e);
     }
   }
