@@ -2,7 +2,7 @@ name: tatsam_country
 description: A new Flutter project.
 
 
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+publish_to: 'none' 
 
 
 version: 1.0.0+1
@@ -14,6 +14,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  dio: ^4.0.6
 
   cupertino_icons: ^1.0.2
 
